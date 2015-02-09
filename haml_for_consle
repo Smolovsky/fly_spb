@@ -1,0 +1,1 @@
+haml -f html5 -q  /var/www/fly.my/index2.haml /var/www/fly.my/index.html

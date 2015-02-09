@@ -1,0 +1,412 @@
+!!! 5
+
+%head
+  %meta{ :Name=> 'Author', :Lang =>'en', :content => 'Kirill Smolovsky'}
+  %title Fly SPB
+
+  %meta{ 'http-equiv' => 'Content-Type', :content =>'text/html', :charset=> 'utf-8'}
+
+  %link{:rel=> 'stylesheet', :href=> 'fonts/fonts.css'}
+  %link{:rel=> 'stylesheet', :href=> 'css/jquery.jgrowl.css'}
+  %link{:rel=> 'stylesheet', :href=> 'css/jquery.arcticmodal.css'}
+  %link{:rel=> 'stylesheet', :href=> 'style.css'}
+
+
+  %script{:src=>'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
+  %script{:src=> 'js/jquery.jgrowl.js'}
+  %script{:src=> 'js/feedback.js'}
+  %script{:src=> 'js/jquery.arcticmodal.js'}
+
+
+  :javascript
+    $(document).ready(function() {
+      $(document).on('click', '.modal_btn', function(elem){
+        $('#middle-modal').arcticmodal();
+        $('#type_of_fly')[0].innerHTML = elem.target.innerHTML;
+      });
+    });
+
+%body
+  %div{style: 'display:none;'}
+    / Формы в модальных окнах
+    .box-modal#middle-modal
+      .modal-close.arcticmodal-close
+
+      .modal-content-box
+        %h1.popup_title ЗАКАЗАТЬ ПОЛЕТ\nНА ПАРАПЛАНЕ
+
+        %form{:action=>'', :method=> 'get', :name=>'form-1'}
+          %input{:name=>'name', :type=>'text', :placeholder=>'Ваше имя'}
+          %input{:name=>'tell' ,:type=>'text', :placeholder=>'Номер телефона'}
+          %input{:name=>'e-mail', :type=>'text', :placeholder=>'E-mail'}
+
+          %textarea {:name=>'type_of_fly', :id=>'type_of_fly' , :style=>'display: none;', :placeholder=>''}
+          .button_sent_order.popup_submit.feedback
+    / Формы в модальных окнах
+
+
+  .global_wrapper
+    .block_1
+      .size_960
+        .block_1_logo
+
+        .block_1_address
+          %b Адрес:
+          г. Санкт-Петербург,<br>Каменноостровский пр. д 37, оф. 633
+
+        .block_1_tel 8 (952) 395-95-95<br>8 (962) 354-60-54
+
+        .block_1_title_block
+          .block_1_title_text ПОЛЕТ НА ПАРАПЛАНЕ
+
+        .block_1_sent_order
+          %div{:style=>'height:190px; width: 100%; position: relative;'}
+            %p.block_1_sent_order_t1
+              ПОЛУЧИТЕ
+              %br
+                СКИДКУ
+            %b.block_1_big_text.block_1_sent_order_t11 2000р
+
+            .block_1_sent_order_t21.robocop_light
+              Цена без скидки<br>
+              .block_1_pig{:style=>'text-decoration: line-through'} 6900р
+
+            .robocop_regular.block_1_sent_order_t22
+              Цена со скидкой
+              .block_1_pig 4900р
+
+          %form.block_1_sent_order_inputs{:action=>'', :method=> 'get', :name=> 'fly_with_sale'}
+            %input{:name=>'name', :type=>'text', :placeholder=>'Ваше имя'}
+            %input{:name=>'tell' ,:type=>'text', :placeholder=>'Номер телефона'}
+            %input{:name=>'e-mail', :type=>'text', :placeholder=>'E-mail'}
+
+            .button_sent_order.popup_submit.feedback
+
+    .block_2
+      .size_960
+        .block_2_promotion АКЦИЯ!
+        .block_2_text
+          приведи друга и получи
+          %br
+            .block_2_sale 50% СКИДКУ
+            на полет
+
+        .block_2_peoples
+
+    .block_3
+      .size_960
+        .block_3_title
+          ВЫБЕРИТЕ
+          %b СВОЙ ПОЛЕТ
+        .block_3_gradient_line
+
+        .block_3_order_block.block_3_order_block_1
+          %table
+            %tr
+              %th{:colspan=>'2'}
+                .block_3_order_block_title ЛЕТАЕМ ВЫШЕ ОБЛАКОВ
+
+            %tr.block_3_post
+              %td.first_col
+                %b ЦЕНА:
+                7500р
+                %br
+                  %nobr
+                    %b ВРЕМЯ ПОЛЕТА:
+                    30-35 мин
+                  %br
+                    %b ВЫСОТА:
+                    выше 1000 м
+
+              %td>
+                .button_order.modal_btn{:style=> 'font-size: 0'} выше 1000 м, 30-35минут
+
+            %tr.block_3_post
+              %td
+                %b ЦЕНА:
+                4900р
+                %br
+                  %nobr
+                    %b ВРЕМЯ ПОЛЕТА:
+                    16-18 мин
+                  %br
+                    %b ВЫСОТА:
+                    выше 1000 м
+              %td
+                .button_order.modal_btn{:style=> 'font-size: 0'} выше 1000 м, 16-18минут
+
+        .block_3_order_block.block_3_order_block_2
+          %table
+            %tr
+              %th{:colspan => "2"}
+                .block_3_order_block_title ЛЕТАЕМ ПОД ОБЛАКАМИ
+            %tr.block_3_post
+              %td
+                %b ЦЕНА:
+                2700р
+                %br
+                  %nobr
+                    %b ВРЕМЯ ПОЛЕТА:
+                    6-8 мин
+                  %br
+                    %b ВЫСОТА:
+                    до 800-1000 м
+              %td
+                .button_order.modal_btn{:style => "font-size: 0"} до 800-1000 м, 6-8мин
+        .block_3_order_block.block_3_order_block_3
+          %table
+            %tr
+              %th{:colspan => "2"}
+                .block_3_order_block_title ЛЕТАЕМ НАД ЗЕМЛЕЙ
+            %tr.block_3_post
+              %td
+                %b ЦЕНА:
+                1500р
+                %br
+                  %nobr
+                    %b ВРЕМЯ ПОЛЕТА:
+                    3-5 мин
+                  %br
+                    %b ВЫСОТА:
+                    до 350-500 м
+              %td
+                .button_order.modal_btn{:style => "font-size: 0"} до 350-500 м, 3-5 мин
+        .block_3_plain_1
+        .block_3_plain_2
+        .block_3_plain_3
+        .block_3_cloud
+
+
+    .block_4
+      .size_960
+        .block_4_title
+          %b 5 ПРИЧИН
+          ВЫБРАТЬ НАС
+        .block_4_line
+        %table.block_4_circles
+          %tr
+            %td
+              .block_4_circle_1.block_4_circle
+              .block_4_text
+                %b 01.
+                Летаем над
+                %br
+                  красивыми
+                  %br видами
+            %td
+              .block_4_circle_2.block_4_circle
+              .block_4_text
+                %b 02.
+                Учитываем
+                %br
+                  пожелания
+                  %br клиентов
+            %td
+              .block_4_circle_3.block_4_circle
+              .block_4_text
+                %b 03.
+                Качественное
+                %br новое оборудование
+            %td
+              .block_4_circle_4.block_4_circle
+              .block_4_text
+                %b 04.
+                Опытные
+                %br пилоты
+            %td
+              .block_4_circle_5.block_4_circle
+              .block_4_text
+                %b 05.
+                Запись полета
+                %br
+                  на Экшен камеру
+                  %br
+                    Gopro 3+ black
+                    %br edition
+    .block_5
+      .size_960
+        .block_5_title
+          ЗАКАЖИТЕ НДИВИДУАЛЬНЫЙ ПОЛЕТ
+          %br НА ПАРАТРАЙКЕ
+        .block_5_text_block
+          .block_5_gradient_line
+          ЗАКАЗ ОТ 1 ЧАСА. ЦЕНА ДОГОВОРНАЯ
+          .block_5_gradient_line
+        %form.block_5_inputs{:action => "", :method => "get", :name => "fly_paratrike"}
+          %input{:name => "name", :placeholder => "Ваше имя", :type => "text"}
+            %input{:name => "tell", :placeholder => "Номер телефона", :type => "text"}
+              .button_sent_order.block_5_submit.feedback
+    .block_separate
+      .size_960
+        %h1.block_separate_title
+          %b ГДЕ
+          МЫ ЛЕТАЕМ
+        .block_separate_line
+    #YMap.block_6
+    .block_separate
+      .size_960
+        .block_separate_title
+          %div
+            %b ФОТО И ВИДЕО
+            НАШИХ ПОЛЕТОВ
+        .block_separate_line
+    .block_7
+      .size_960
+        .block_7_images_4
+          %img{:src => "images/b9_1.jpg"}
+            %img{:src => "images/b9_2.jpg"}
+              %br
+                %img{:src => "images/b9_3.jpg"}
+                  %img{:src => "images/b9_4.jpg"}
+        %img.block_7_image_5{:src => "images/b9_5.jpg"}
+    .block_separate
+      .size_960
+        .block_separate_title
+          %div
+            %b ОТЗЫВЫ
+            НАШИХ КЛИЕНТОВ
+        .block_separate_line
+    .block_8
+      .size_960
+        %table
+          %tr.block_8_post
+            %td.block_8_author
+              %img{:src => "images/comment_face.png"}
+                %br
+                  .block_8_author_text
+                    %b ВИКТОР ЛОГИНОВ,
+                    %br г.Санкт-Петербург
+            %td.block_8_post_text
+              Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+              полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+              подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+              как многие довольствоваться простым конвертом.
+              .block_8_post_title
+                У нас получилась шикарная подарочная коробка, глянцевая
+                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+              Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+              восторге будет получатель.
+          %tr.block_8_post
+            %td.block_8_author
+              %img{:src => "images/comment_face.png"}
+                %br
+                  .block_8_author_text
+                    %b ВИКТОР ЛОГИНОВ,
+                    %br г.Санкт-Петербург
+            %td.block_8_post_text
+              Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+              полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+              подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+              как многие довольствоваться простым конвертом.
+              .block_8_post_title
+                У нас получилась шикарная подарочная коробка, глянцевая
+                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+              Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+              восторге будет получатель.
+          %tr.block_8_post
+            %td.block_8_author
+              %img{:src => "images/comment_face.png"}
+                %br
+                  .block_8_author_text
+                    %b ВИКТОР ЛОГИНОВ,
+                    %br г.Санкт-Петербург
+            %td.block_8_post_text
+              Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+              полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+              подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+              как многие довольствоваться простым конвертом.
+              .block_8_post_title
+                У нас получилась шикарная подарочная коробка, глянцевая
+                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+              Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+              восторге будет получатель.
+    .block_9
+      .size_960
+        .block_9_title
+          КАК
+          %b МЫ РАБОТАЕМ
+        .block_9_line
+        %table.block_9_circles
+          %tr
+            %td
+              .block_9_img_1
+            %td
+              .block_9_img_great
+            %td
+              .block_9_img_2
+            %td
+              .block_9_img_great
+            %td
+              .block_9_img_3
+        .block_9_img_text_1.block_9_img_text
+          ВЫ СООБЩАЕТЕ НАМ ФИО
+          %br
+            ЧЕЛОВЕКА, НА КОТОРЫЕ
+            %BR
+              НЕОБХОДИМО ОФОРМИТЬ
+              %BR
+                СЕРТИФИКАТ, И ВИД ПОЛЕТА
+        .block_9_img_text_2.block_9_img_text
+          МЫ ОФОРМЛЯЕМ
+          %br
+            СЕРТИФИКАТ
+        .block_9_img_text_3.block_9_img_text
+          ВЫ ОПЛАЧИВАЕТЕ
+        .block_9_payment_title ОПЛАТА:
+        .block_9_payment.block_9_payment_not_nul
+          %b ПО БЕЗНАЛУ:
+          .italic
+            \- переводом яндекс деньги
+            %br
+              \- переводом на карту Альфа Банка
+              %br
+                \- переводом на наш Qiwi кошелек (N ) или через любой
+                %br
+                  терминал Qiwi
+          %p{:style => "font-weight: 100; font-style: normal;"}
+            После этого мы на Вашу электронную почту присылаем
+            %br
+              Вам электронный сертификат, который необходимо
+              %br
+                распечатать и привезти с собой в день полета.
+        .block_9_payment.block_9_payment_nul
+          %b НАЛИЧНЫМИ:
+          %br
+            .italic - в офисе по адресу м.петроградская
+            %p{:style => " font-weight: 100;font-style: normal;"}
+              После оплаты мы сразу Вам выдаем конверт
+              %br с сертификатом.
+            %p.italic
+              \- курьеру при получении сертификата у метро Озерки
+              %br
+                либо м. Гражданский проспект
+    .block_10
+      .size_960
+        .block_10_title_block
+          .block_10_title_text ПОЛЕТ НА ПАРАПЛАНЕ
+        .block_10_logo
+        .block_10_address
+          %b Адрес:
+          г. Санкт-Петербург,
+          %br
+            Каменноостровский пр. д 37, оф.
+            %br
+              633 (перед приездом позвонить)
+              %br
+                %b Время работы:
+                с 11:00 до 17:00
+        .block_10_tel
+          8 (952) 395-95-95
+          %br 8 (962) 354-60-54
+        .block_10_email
+          %b e-mail:
+          %a{:href => "mailto:spbf@mail.ru"} spbf@mail.ru
+        .block_10_social
+          %img{:src => "images/soc_1.png"}
+            %img{:src => "images/soc_2.png"}
+              %img{:src => "images/soc_3.png"}
+                %img{:src => "images/soc_4.png"}
+                  %img{:src => "images/soc_5.png"}
+    
+    %script{:src => "http://api-maps.yandex.ru/1.1/index.xml", :type => "text/javascript"}
+    %script{:src => "js/map.js"}

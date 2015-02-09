@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <META Name= Author Lang="en" content="Kirill Smolovsky">
+    <title>Fly SPB</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel ='stylesheet' href="css/reset.css">
+    <link rel ='stylesheet' href="css/jquery.jgrowl.css">
+    <link rel ='stylesheet' href="css/jquery.arcticmodal.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="js/feedback.js"></script>
+    <script type="text/javascript" src="js/jquery.arcticmodal.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', '.modal_btn', function(elem){
+                $('#middle-modal').arcticmodal();
+                $('#type_of_fly')[0].innerHTML = elem.target.innerHTML;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="display:none;">
+        <!-- Формы в модальных окнах -->
+        <div class="box-modal" id="middle-modal">
+            <div class="modal-close arcticmodal-close"></div>
+
+            <div class="modal-content-box">
+                <h1 class="popup_title">ЗАКАЗАТЬ ПОЛЕТ<br>НА ПАРАПЛАНЕ</h1>
+
+                <form action="" method="get" name="form-1">
+                    <input  name="name" type="text" placeholder="Ваше имя">
+                    <input  name="tell" type="text" placeholder="Номер телефона">
+                    <input  name="e-mail" type="text" placeholder="E-mail">
+
+                    <textarea name="type_of_fly" id="type_of_fly"  style="display: none;"  placeholder=""></textarea>
+                    <div class="button_sent_order popup_submit feedback" ></div>
+                </form>
+            </div>
+        </div>
+        <!-- // Формы в модальных окнах -->
+    </div>
+
+    <div class="global_wrapper">
+
+        <div class="block_1">
+            <div class="size_960">
+                <div class="block_1_logo"></div>
+
+                <div class="block_1_address">
+                    <b>Адрес:</b> г. Санкт-Петербург,<br>Каменноостровский пр. д 37, оф. 633
+                </div>
+
+                <div class="block_1_tel">8 (952) 395-95-95<br>8 (962) 354-60-54</div>
+
+                <div class="block_1_title_block">
+                    <div class="block_1_title_text">ПОЛЕТ НА ПАРАПЛАНЕ</div>
+                </div>
+
+                <div class="block_1_sent_order">
+                    <div style="height:190px; width: 100%; position: relative;">
+                        <p class="block_1_sent_order_t1">
+                            ПОЛУЧИТЕ<br>СКИДКУ
+                        </p>
+                        <b class="block_1_big_text block_1_sent_order_t11" >2000р</b>
+
+                        <div class="block_1_sent_order_t21 robocop_light">
+                            Цена без скидки<br>
+                            <div class="block_1_pig" style="text-decoration: line-through">6900р</div>
+                        </div>
+
+                        <div class="robocop_regular block_1_sent_order_t22">
+                            Цена со скидкой
+                            <div class="block_1_pig">4900р</div>
+                        </div>
+                    </div>
+
+                    <form class="block_1_sent_order_inputs"  action="" method="get" name="fly_with_sale">
+                        <input  name="name" type="text" placeholder="Ваше имя">
+                        <input  name="tell" type="text" placeholder="Номер телефона">
+                        <input  name="e-mail" type="text" placeholder="E-mail">
+
+                        <div class="button_sent_order popup_submit feedback" ></div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block_2">
+            <div class="size_960">
+                <div class="block_2_promotion">АКЦИЯ!</div>
+                <div class="block_2_text">
+                    приведи друга и получи<br>
+                    <div class="block_2_sale">50% СКИДКУ</div>
+                    на полет
+                </div>
+                <div class="block_2_peoples"></div>
+            </div>
+        </div>
+
+        <div class="block_3">
+            <div class="size_960">
+                <div class="block_3_title">ВЫБЕРИТЕ <b> СВОЙ ПОЛЕТ</b></div>
+                <div class="block_3_gradient_line"></div>
+
+                <div class="block_3_order_block block_3_order_block_1">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                <div class="block_3_order_block_title">ЛЕТАЕМ ВЫШЕ ОБЛАКОВ</div>
+                            </th>
+                        </tr>
+                        <tr class="block_3_post">
+                            <td class="first_col">
+                                <b>ЦЕНА:</b> 7500р<br>
+                                <nobr><b>ВРЕМЯ ПОЛЕТА:</b> 30-35 мин</nobr><br>
+                                <b>ВЫСОТА:</b> выше 1000 м
+                            </td>
+                            <td>
+                                <div class="button_order modal_btn" style="font-size: 0">выше 1000 м, 30-35минут</div>
+                            </td>
+                        </tr>
+
+                        <tr class="block_3_post">
+                            <td>
+                                <b>ЦЕНА:</b> 4900р<br>
+                                <nobr><b>ВРЕМЯ ПОЛЕТА:</b> 16-18 мин</nobr><br>
+                                <b>ВЫСОТА:</b> выше 1000 м
+                            </td>
+                            <td>
+                                <div class="button_order modal_btn" style="font-size: 0">выше 1000 м, 16-18минут</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="block_3_order_block block_3_order_block_2">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                <div class="block_3_order_block_title">ЛЕТАЕМ ПОД ОБЛАКАМИ</div>
+                            </th>
+                        </tr>
+                        <tr class="block_3_post">
+                            <td>
+                                <b>ЦЕНА:</b> 2700р<br>
+                                <nobr><b>ВРЕМЯ ПОЛЕТА:</b> 6-8 мин</nobr><br>
+                                <b>ВЫСОТА:</b> до 800-1000 м
+                            </td>
+                            <td>
+                                <div class="button_order modal_btn" style="font-size: 0">до 800-1000 м, 6-8мин</div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="block_3_order_block block_3_order_block_3">
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                <div class="block_3_order_block_title">ЛЕТАЕМ НАД ЗЕМЛЕЙ</div>
+                            </th>
+                        </tr>
+                        <tr class="block_3_post">
+                            <td>
+                                <b>ЦЕНА:</b> 1500р<br>
+                                <nobr><b>ВРЕМЯ ПОЛЕТА:</b> 3-5 мин</nobr><br>
+                                <b>ВЫСОТА:</b> до 350-500 м
+                            </td>
+                            <td>
+                                <div class="button_order modal_btn" style="font-size: 0">до 350-500 м, 3-5 мин</div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+                <div class="block_3_plain_1"></div>
+                <div class="block_3_plain_2"></div>
+                <div class="block_3_plain_3"></div>
+                <div class="block_3_cloud"></div>
+            </div>
+        </div>
+
+        <div class="block_4">
+            <div class="size_960">
+                <div class="block_4_title"><b>5 ПРИЧИН</b> ВЫБРАТЬ НАС</div>
+                <div class="block_4_line"></div>
+
+                <table class="block_4_circles">
+                    <tr>
+                        <td>
+                            <div class="block_4_circle_1 block_4_circle"></div>
+                            <div class="block_4_text"><b>01.</b> Летаем над<br>красивыми<br>видами</div>
+                        </td>
+                        <td>
+                            <div class="block_4_circle_2 block_4_circle"></div>
+                            <div class="block_4_text"><b>02.</b> Учитываем <br>пожелания<br>клиентов</div>
+                        </td>
+                        <td>
+                            <div class="block_4_circle_3 block_4_circle"></div>
+                            <div class="block_4_text"><b>03.</b> Качественное<br>новое оборудование</div>
+                        </td>
+                        <td>
+                            <div class="block_4_circle_4 block_4_circle"></div>
+                            <div class="block_4_text"><b>04.</b> Опытные<br>пилоты</div>
+                        </td>
+                        <td>
+                            <div class="block_4_circle_5 block_4_circle"></div>
+                            <div class="block_4_text"><b>05.</b> Запись полета<br>на Экшен камеру<br>Gopro 3+ black<br>edition</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="block_5">
+            <div class="size_960">
+                <div class="block_5_title">ЗАКАЖИТЕ НДИВИДУАЛЬНЫЙ ПОЛЕТ<br>НА ПАРАТРАЙКЕ</div>
+                <div class="block_5_text_block">
+                    <div class="block_5_gradient_line"></div>
+                    ЗАКАЗ ОТ 1 ЧАСА. ЦЕНА ДОГОВОРНАЯ
+                    <div class="block_5_gradient_line"></div>
+                </div>
+
+                <form  class="block_5_inputs" action="" method="get" name="fly_paratrike">
+                    <input  name="name" type="text" placeholder="Ваше имя">
+                    <input  name="tell" type="text" placeholder="Номер телефона">
+
+                    <div class="button_sent_order block_5_submit feedback"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="block_separate">
+            <div class="size_960">
+                <h1 class="block_separate_title">
+                    <b>ГДЕ</b> МЫ ЛЕТАЕМ
+                </h1>
+                <div class="block_separate_line"></div>
+            </div>
+        </div>
+
+        <div id="YMap"  class="block_6">
+
+        </div>
+
+        <div class="block_separate">
+            <div class="size_960">
+                <div class="block_separate_title">
+                    <div><b>ФОТО И ВИДЕО</b> НАШИХ ПОЛЕТОВ</div>
+                </div>
+                <div class="block_separate_line"></div>
+            </div>
+        </div>
+
+        <div class="block_7">
+            <div class="size_960">
+                <div class="block_7_images_4">
+                    <img src="images/b9_1.jpg"><img src="images/b9_2.jpg"> <br>
+                    <img src="images/b9_3.jpg"><img src="images/b9_4.jpg">
+                </div>
+                <img src="images/b9_5.jpg" class="block_7_image_5">
+            </div>
+        </div>
+
+        <div class="block_separate">
+            <div class="size_960">
+                <div class="block_separate_title">
+                    <div><b>ОТЗЫВЫ</b> НАШИХ КЛИЕНТОВ</div>
+                </div>
+                <div class="block_separate_line"></div>
+            </div>
+        </div>
+
+        <div class="block_8">
+            <div class="size_960">
+                <table>
+                    <tr class="block_8_post">
+                        <td class="block_8_author">
+                            <img src="images/comment_face.png"> <br>
+                            <div class="block_8_author_text"><b>ВИКТОР ЛОГИНОВ,</b><br>г.Санкт-Петербург</div>
+                        </td>
+                        <td class="block_8_post_text">
+                            Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+                            полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+                            подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+                            как многие довольствоваться простым конвертом.
+                            <div class="block_8_post_title">
+                                У нас получилась шикарная подарочная коробка, глянцевая
+                                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+                            </div>
+                            Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+                            восторге будет получатель.
+                        </td>
+                    </tr>
+                    <tr class="block_8_post">
+                        <td class="block_8_author">
+                            <img src="images/comment_face.png"> <br>
+                            <div class="block_8_author_text"><b>ВИКТОР ЛОГИНОВ,</b><br>г.Санкт-Петербург</div>
+                        </td>
+                        <td class="block_8_post_text">
+                            Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+                            полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+                            подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+                            как многие довольствоваться простым конвертом.
+                            <div class="block_8_post_title">
+                                У нас получилась шикарная подарочная коробка, глянцевая
+                                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+                            </div>
+                            Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+                            восторге будет получатель.
+                        </td>
+                    </tr>
+                    <tr class="block_8_post">
+                        <td class="block_8_author">
+                            <img src="images/comment_face.png"> <br>
+                            <div class="block_8_author_text"><b>ВИКТОР ЛОГИНОВ,</b><br>г.Санкт-Петербург</div>
+                        </td>
+                        <td class="block_8_post_text">
+                            Проверяли, знаем. Наши друзья испытали это впечатление и остались без ума от
+                            полученных эмоций. Срок действия подарочного сертификата - 6 месяцев. Восторг от
+                            подарка начинается с красивой упаковки.  Мы привлекли лучших дизайнеров, а не стали,
+                            как многие довольствоваться простым конвертом.
+                            <div class="block_8_post_title">
+                                У нас получилась шикарная подарочная коробка, глянцевая
+                                поверхность, прямоугольная форма, ниши для карточки и вкладыша.
+                            </div>
+                            Можно выбрать цвет: воздушный белый или стильный черный. Представьте, в каком
+                            восторге будет получатель.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="block_9">
+            <div class="size_960">
+                <div class="block_9_title">КАК <b>МЫ РАБОТАЕМ</b></div>
+                <div class="block_9_line"></div>
+
+                <table  class="block_9_circles">
+                    <tr>
+                        <td>
+                            <div class="block_9_img_1"></div>
+                        </td>
+                        <td>
+                            <div class="block_9_img_great"></div>
+                        </td>
+                        <td>
+                            <div class="block_9_img_2"></div>
+                        </td>
+                        <td>
+                            <div class="block_9_img_great"></div>
+                        </td>
+                        <td>
+                            <div class="block_9_img_3"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="block_9_img_text_1 block_9_img_text">
+                    ВЫ СООБЩАЕТЕ НАМ ФИО <br>ЧЕЛОВЕКА, НА КОТОРЫЕ
+                    <BR> НЕОБХОДИМО ОФОРМИТЬ<BR> СЕРТИФИКАТ, И ВИД ПОЛЕТА
+                </div>
+                <div class="block_9_img_text_2 block_9_img_text">
+                    МЫ ОФОРМЛЯЕМ <br>СЕРТИФИКАТ
+                </div>
+                <div class="block_9_img_text_3 block_9_img_text">
+                    ВЫ ОПЛАЧИВАЕТЕ
+                </div>
+
+                <div class="block_9_payment_title">ОПЛАТА:</div>
+                <div class="block_9_payment block_9_payment_not_nul">
+                    <b>ПО БЕЗНАЛУ:</b>
+                    <div class="italic"> - переводом яндекс деньги <br>
+                        - переводом на карту Альфа Банка <br>
+                        - переводом на наш Qiwi кошелек (N ) или через любой <br>терминал Qiwi
+                    </div>
+
+                    <p style="font-weight: 100; font-style: normal;">
+                        После этого мы на Вашу электронную почту присылаем <br>
+                        Вам электронный сертификат, который необходимо <br>
+                        распечатать и привезти с собой в день полета.
+                    </p>
+                </div>
+
+                <div class="block_9_payment block_9_payment_nul">
+                    <b>НАЛИЧНЫМИ:</b><br>
+                    <div class="italic">- в офисе по адресу м.петроградская</div>
+                    <p style=" font-weight: 100;font-style: normal;">После оплаты мы сразу Вам выдаем конверт <br>с сертификатом.</p>
+
+                    <p class="italic">
+                        - курьеру при получении сертификата у метро Озерки<br>
+                        либо м. Гражданский проспект
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="block_10">
+            <div class="size_960">
+                <div class="block_10_title_block">
+                    <div class="block_10_title_text">ПОЛЕТ НА ПАРАПЛАНЕ</div>
+                </div>
+                <div class="block_10_logo"></div>
+
+                <div class="block_10_address">
+                    <b>Адрес:</b> г. Санкт-Петербург,<br>Каменноостровский пр. д 37, оф. <br>
+                    633 (перед приездом позвонить)<br>
+                    <b>Время работы:</b> с 11:00 до 17:00
+                </div>
+
+                <div class="block_10_tel">8 (952) 395-95-95<br>8 (962) 354-60-54</div>
+                <div class="block_10_email"><b>e-mail: </b><a href="mailto:spbf@mail.ru">spbf@mail.ru</a></div>
+
+                <div class="block_10_social">
+                    <img src="images/soc_1.png">
+                    <img src="images/soc_2.png">
+                    <img src="images/soc_3.png">
+                    <img src="images/soc_4.png">
+                    <img src="images/soc_5.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="http://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
